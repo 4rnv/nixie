@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Lato', sans-serif;
+}
+
+body {
+    background: #070707;
+}
+
+.tens, .ones {
+    border: 1px solid gray;
+    border-radius: 25% 25% 0 0;
+    padding: 30px 15px;
+}
+    
+.clock {
+    color: rgba(50, 50, 50, 0.4);
+    display: block;
+    margin: 20vh auto;
+    text-align: center;
+    font-family:'Lato', sans-serif;
+    font-size: 100px;
+}
+.clock p.separator,
+.clock section {
+    display: inline-block;
+}
+.clock section div p {
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    transition: 0.3s ease color, 0.3s ease text-shadow;
+}
+.clock p.separator {
+    font-size: 60px;
+    vertical-align: top;
+    margin-top: 20px;
+    color: gray;
+}
+.clock section p.active {
+    color: #ff8e48;
+    text-shadow: 0px 10px 20px #ff8e48;
+}
+.clock section div {
+    display: inline-block;
+    width: 60px;
+    height: 120px;
+}
+
+@media only all and (max-width: 768px) {
+    .clock p.separator {
+        display: none;
+      }    
+}
+
+#themeColor {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: none;
+}
+
+#themeColor::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#themeColor::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+#themeColor::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.message {
+    color: #eee;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+dialog {
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 10% 10% 0 0;
+    max-width: 50%;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1f1f1f;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+input[type="number"] {
+    padding: 10px;
+    background: #333;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    color: #eee;
+    font-size: 2rem;
+}
+
+button {
+    background: #ff8e48;
+    text-align: center;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #1f1f1f;
+    color: #ff8e48;
+    border: 1px solid #ff8e48;
+}

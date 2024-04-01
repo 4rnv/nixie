@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" >
+    <title>Nixie Timer</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" id="themeStylesheet">
+</head>
+<body>
+    <input type="color" id="themeColor" name="themeColor" value="#ff8e48">
+    <div class="clock">
+        <section class="hours">
+            <div class="tens">
+                <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+            </div>
+            <div class="ones">
+                <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+            </div>
+        </section>
+        <p class="separator">:</p>
+        <section class="mins">
+            <div class="tens">
+                <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+            </div>
+            <div class="ones">
+                <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+            </div>
+        </section>
+        <p class="separator">:</p>
+        <section class="secs">
+            <div class="tens">
+                <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+            </div>
+            <div class="ones">
+                <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+            </div>
+        </section>
+    </div>
+    <dialog open>
+    <form id="durationForm" method="dialog">
+        <input type="number" id="inHours"  list="hourList" placeholder="00" min="0" value="0" required>
+        <datalist id="hourList">
+        </datalist>
+        <br>
+        <input type="number" id="inMinutes"  list="minuteList" placeholder="00" min="0"  value="0" required>
+        <datalist id="minuteList">
+        </datalist>
+        <br>
+        <input type="number" id="inSeconds"  list="secondList" placeholder="00" min="0"  value="0" required>
+        <datalist id="secondList">
+        </datalist>
+        <br>
+        <button type="submit">Start</button>
+    </form>
+    </dialog>
+    <dialog id="timesUpDialog">
+        <p class="message">Time's up! To create a new timer, refresh the screen.</p>
+        <button id="closeButton">Close</button>
+    </dialog>    
+    <script src="nixie.js"></script>
+</body>
+</html>
