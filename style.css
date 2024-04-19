@@ -30,6 +30,7 @@ body {
     position: absolute;
     width: 60px;
     text-align: center;
+    color: #7777;
     transition: 0.3s ease color, 0.3s ease text-shadow;
 }
 .clock p.separator {
@@ -40,7 +41,8 @@ body {
 }
 .clock section p.active {
     color: #ff8e48;
-    text-shadow: 0px 10px 20px #ff8e48;
+    text-shadow: 10px 0px 1px #ff8e48;
+    font-weight: 600;
 }
 .clock section div {
     display: inline-block;

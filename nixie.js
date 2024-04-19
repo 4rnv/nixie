@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const stylesheet = getThemeStylesheet();
         clearThemeColorRules(stylesheet);
 
-        stylesheet.insertRule(`.clock section p.active { color: ${color}; text-shadow: 0px 10px 20px ${color}; }`, stylesheet.cssRules.length);
+        stylesheet.insertRule(`.clock section p.active { color: ${color}; text-shadow: 10px 0px 1px ${color}; font-weight: 600;}`, stylesheet.cssRules.length);
         stylesheet.insertRule(`button { background-color: ${color}; text-align: center; color: white; padding: 0.5rem 1rem; border: none; border-radius: 10px 10px 0 0; cursor: pointer; font-size: 2rem; font-weight: bold; transition: all 0.3s;}`, stylesheet.cssRules.length);
         stylesheet.insertRule(`button:hover { background: #1f1f1f; color: ${color}; border: 1px solid ${color}; }`, stylesheet.cssRules.length);
     }
